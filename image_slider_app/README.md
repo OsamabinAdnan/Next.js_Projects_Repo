@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Image Slider
+
+A modern, responsive image slider built with Next.js, TypeScript, and Tailwind CSS. This application fetches images from the Unsplash API and displays them in an interactive carousel with autoplay functionality.
+
+**Image Slider App Image**
+
+---
+
+![Image Slider App](public/image%20slider.png "Image Slider App")
+
+---
+## Features
+
+- 🖼️ Dynamic image loading from Unsplash API
+- ⚡ Automatic slideshow with play/pause controls
+- 🎨 Beautiful backdrop blur effects
+- 🎯 Responsive design for all screen sizes
+- 🌈 Interactive 3D background using Spline
+- 🔄 Smooth transitions between images
+- 📱 Mobile-friendly interface
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/) - React framework
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [Unsplash API](https://unsplash.com/developers) - Image source
+- [Spline](https://spline.design/) - 3D background effects
+- [Lucide Icons](https://lucide.dev/) - UI icons
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js (v18 or higher)
+- npm or yarn package manager
+- Unsplash API access key
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd image_slider_app
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Create a `.env.local` file in the root directory and add your Unsplash API key:
+```env
+NEXT_PUBLIC_UNSPLASH_ACCESS_KEY=your_unsplash_api_key_here
+```
+
+4. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The image slider automatically starts playing when the page loads. You can:
+- Click the play/pause button to control the slideshow
+- View image details including photographer name and description
+- Enjoy the interactive 3D background animation
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── Image_Slider.tsx
+│   └── ui/
+│       ├── button.tsx
+│       └── carousel.tsx
+├── lib/
+│   └── utils.ts
+└── public/
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Acknowledgments
+
+- Thanks to Unsplash for providing the image API
+- Spline for the amazing 3D background capabilities
+- Next.js team for the awesome framework
