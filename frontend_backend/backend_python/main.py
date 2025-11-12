@@ -25,14 +25,11 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY environment variable not set")
 
-BASE_URL = os.getenv("BASE_URL")
-if not BASE_URL:
-    raise ValueError("BASE_URL environment variable not set")
 
 # 1. Which LLM Service?
 external_client: AsyncOpenAI = AsyncOpenAI(
     api_key=GEMINI_API_KEY,
-    base_url=BASE_URL,
+    base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
 )
 
 # 2. Which LLM Model?
